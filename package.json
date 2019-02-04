@@ -12,10 +12,16 @@
   },
   "dependencies": {
     "@expo/samples": "2.1.1",
+    "@expo/vector-icons": "^9.0.0",
+    "dsteem": "^0.11.2",
     "expo": "^32.0.0",
+    "ipfs-http-client": "^29.1.0",
+    "native-base": "^2.11.0",
     "react": "16.5.0",
     "react-native": "https://github.com/expo/react-native/archive/sdk-32.0.0.tar.gz",
-    "react-navigation": "^3.0.9"
+    "react-navigation": "^3.0.9",
+    "react-navigation-header-buttons": "^2.1.2",
+    "react-thumbnail-gallery": "^2.0.2"
   },
   "devDependencies": {
     "babel-preset-expo": "^5.0.0",

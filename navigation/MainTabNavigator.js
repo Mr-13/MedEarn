@@ -4,8 +4,9 @@ import { createStackNavigator, createBottomTabNavigator } from 'react-navigation
 
 import TabBarIcon from '../components/TabBarIcon';
 import HomeScreen from '../screens/HomeScreen';
+import SelectPhotoScreen from '../screens/SelectPhotoScreen';
 import ProfileScreen from '../screens/ProfileScreen';
-
+import NewPostScreen from '../screens/NewPostScreen';
 
 const HomeStack = createStackNavigator({
   Home: HomeScreen,
@@ -21,11 +22,24 @@ HomeStack.navigationOptions = {
     />
   ),
 };
-const AddStack = createStackNavigator({
-  Settings: ProfileScreen,
+const SelectPhotoStack = createStackNavigator({
+  SelectPhoto: SelectPhotoScreen,
 });
 
-AddStack.navigationOptions = {
+SelectPhotoStack.navigationOptions = {
+  tabBarLabel: () => {return null},
+  tabBarIcon: ({ focused }) => (
+    <TabBarIcon
+      focused={focused}
+      name={Platform.OS === 'ios' ? 'control-point' : 'control-point'}
+    />
+  ),
+};
+const NewPostStack = createStackNavigator({
+  NewPost: NewPostScreen,
+});
+
+NewPostStack.navigationOptions = {
   tabBarLabel: () => {return null},
   tabBarIcon: ({ focused }) => (
     <TabBarIcon
@@ -35,9 +49,8 @@ AddStack.navigationOptions = {
   ),
 };
 
-
 const ProfileStack = createStackNavigator({
-  Settings: ProfileScreen,
+  Profile: ProfileScreen,
 });
 
 ProfileStack.navigationOptions = {
@@ -53,6 +66,6 @@ ProfileStack.navigationOptions = {
 
 export default createBottomTabNavigator({
   HomeStack,
-  AddStack,
-  ProfileStack,  
+  SelectPhotoStack,
+  ProfileStack,
 });
