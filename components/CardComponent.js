@@ -35,14 +35,19 @@ export default class CardComponent extends Component {
                     <Image style={styles.image} source= {{ uri: 'http://lorempixel.com/400/200/'}}/>
                 </CardItem>
                 <CardItem >
+                <Left>
                     <Button transparent>
-                    <CardIcon name='home'
-                    />
+                    <CardIcon name='favorite-border' />
                     </Button>
                     <Button transparent>
-                    <CardIcon name='home'
-                    />
+                    <CardIcon name='chat-bubble-outline' />
                     </Button>
+                </Left>
+                <Right>
+                <Button transparent>
+                    <CardIcon name='bookmark-border' />
+                    </Button>
+                </Right>
                 </CardItem>
             </Card>
         );
