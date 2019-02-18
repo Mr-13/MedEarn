@@ -17,6 +17,15 @@ export default class HomeScreen extends React.Component {
       <Container style={styles.container}>
         <Content>
           <CardComponent/>
+          <CardComponent/>
+          <CardComponent/>
+          <CardComponent/>
+          <CardComponent/>
+          <CardComponent/>
+          <CardComponent/>
+          <CardComponent/>
+          <CardComponent/>
+          <CardComponent/>
         </Content>
       </Container>
     );
