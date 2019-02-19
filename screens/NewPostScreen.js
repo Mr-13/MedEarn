@@ -8,6 +8,7 @@ import HeaderButtons from 'react-navigation-header-buttons';
 export default class NewPostScreen extends React.Component {
   static navigationOptions = ({ navigation }) => ({
     title: 'New Post',
+    
     headerRight: (
       <HeaderButtons IconComponent={Ionicons} iconSize={23} color="black">
         <HeaderButtons.Item

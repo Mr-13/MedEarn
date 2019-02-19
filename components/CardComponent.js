@@ -20,6 +20,7 @@ import CardIcon from './CardIcon';
 
 export default class CardComponent extends Component {
     render() {
+    
         return (
             <Card>
                 <CardItem>
