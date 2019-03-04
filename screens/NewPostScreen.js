@@ -2,6 +2,7 @@ import { Ionicons } from '@expo/vector-icons';
 import React from 'react';
 import { Image, TextInput, View } from 'react-native';
 import HeaderButtons from 'react-navigation-header-buttons';
+import { uploadImage } from '../ipfs/ipfs_api';
 
 // import Fire from '../Fire';
 
@@ -17,6 +18,7 @@ export default class NewPostScreen extends React.Component {
             const image = navigation.getParam('image');
             if (text && image) {
               navigation.goBack();
+              // const ipfsHash = uploadImage(image);
               // Fire.shared.post({ text: text.trim(), image });
             } else {
               alert('Need valid description');
@@ -46,6 +48,7 @@ export default class NewPostScreen extends React.Component {
             this.props.navigation.setParams({ text });
           }}
         />
+          
       </View>
     );
   }
