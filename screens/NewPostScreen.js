@@ -9,6 +9,7 @@ import { uploadImage } from '../ipfs/ipfs_api';
 export default class NewPostScreen extends React.Component {
   static navigationOptions = ({ navigation }) => ({
     title: 'New Post',
+    
     headerRight: (
       <HeaderButtons IconComponent={Ionicons} iconSize={23} color="black">
         <HeaderButtons.Item
